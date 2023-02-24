@@ -1,0 +1,19 @@
+/*componente root*/
+.root{
+    /*Apariencia, confugaciones básicas*/
+    max-width: 40rem;
+    height: 100vh; /*"vh" es para que se expanda en el 100% de la pantalla seg{un lo que indiquemos*/
+    border: 1px solid black; 
+    border-radius: 5px;
+    
+    /*Posición de hijos*/
+    margin:auto;
+    margin-top: 1rem; /*Se separa de arriba*/
+    padding: 1rem;
+
+    /*comportamiento*/
+}
+.root > h1{  /*">" indicar +, como para que también lo use, estar{ia usando solo los nietos*/
+    font-size: 3rem;
+    text-align: center;
+}
