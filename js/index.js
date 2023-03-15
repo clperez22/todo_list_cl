@@ -51,7 +51,9 @@ function blanco(){
  let tch = document.querySelectorAll(".ico");
 
  tch.forEach((tch, nueva_tarea)=>{
-  tch.addEventListener("click", tch)
+  tch.addEventListener("click",() =>{
+    tch.classList.toggle("icono");
+  })
  })
 
  /*function pueba(){

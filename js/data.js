@@ -2,7 +2,7 @@
 let data_todo_list =[
   {
     id: "1",
-    mensaje: "Organizar y gaveta",
+    mensaje: "Organizar y gabeta",
     estado: true
   },
   {
