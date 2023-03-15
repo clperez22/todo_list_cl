@@ -4,13 +4,14 @@ export function item_component (numero_tarea){
     
     let item = `
     <div class="todo_item">
-        <span class="ico">☑️</span>
-            <p>
+        <span id="icono" class="ico">☑️</span>
+            <p><del>
               ${data_todo_list[numero_tarea].mensaje}
-            </p>
-        <span class="ico2">X</span>
+            </del></p>
     </div>`;
 
+    data_todo_list.estado = false;
     return item;
 
-};
+}
+console.log(data_todo_list);

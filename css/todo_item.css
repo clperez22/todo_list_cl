@@ -27,3 +27,6 @@
 .ico2:hover{
     cursor: pointer;
 }
+.icono{
+    text-decoration: line-through;
+}

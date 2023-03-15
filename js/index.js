@@ -1,38 +1,64 @@
 //LIBRERIA
+import { imprimir_todos } from "./cargar-los-todos.js";
 import { data_todo_list } from "./data.js";
-import {item_component} from "./todo_item.js";
-
-//FUNCION PARA IMPRIMIR A LISTA DE TAREAS
 let caja_de_todos = document.querySelector(".todo_list")
-
-function imprimir_todos(){
-    
-    data_todo_list.forEach((element, indice) => {
-
-        let todo = document.createElement("div");
-
-        todo.innerHTML= item_component(indice);
-
-        caja_de_todos.appendChild(todo)
-
-    });
-
-}
 imprimir_todos();
 
-
-//CREAR UNA NUEVA TAREA
-function nueva_tarea (){
-   data_todo_list.push(
-        {
-            id: "4",
-            mensaje: "Comer una fruta",
-            estado: true
-          }
-   );
-   caja_de_todos.innerHTML= "";
-   imprimir_todos();
+function puente(){
+  let mensaje  = document.querySelector(".entrada").value;
+  nueva_tarea(mensaje);
+  
 }
-let boton = document.querySelector("#btn-todo");
-boton.addEventListener("click", nueva_tarea);
+function ol(){
+  let tachado = document.querySelector(".icono").value;
+  nueva_tarea(tachado)
+}
 
+
+//CREAR UNA NUEVA TAREAs
+
+function nueva_tarea (mensaje){
+    data_todo_list.push(
+         {
+             id: "4",
+             mensaje: mensaje,
+             estado: true
+           }
+    )
+    caja_de_todos.innerHTML= " ";
+    imprimir_todos();
+
+    document.querySelector(".modal").classList.remove("Activar"); 
+    document.querySelector(".entrada").value = " ";
+
+ }
+ document.querySelector(".btn-tarea").addEventListener("click",puente);
+
+ 
+
+
+/*Caja de texto */
+function blanco(){
+  let espacio = document.querySelector(".entrada").value= " ";
+  (espacio);
+}
+
+ document.querySelector(".cerrar").addEventListener("click",blanco);
+ 
+
+ /*tachado ***********************************************/
+
+ let tch = document.querySelectorAll(".ico");
+
+ tch.forEach((tch, nueva_tarea)=>{
+  tch.addEventListener("click")
+ })
+
+ /*function pueba(){
+  let tachado = document.querySelector(".tachar").value= " ";
+  (tachado)
+ }
+ document.querySelector(".todo_list").addEventListener("click", pueba);
+ 
+ */
+ 

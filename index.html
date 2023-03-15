@@ -15,22 +15,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
 
-
 </head>
 <body>
     <div class="root">
         
         <!--Primer toDo list que solo se va a copiar-->
         <h1 class="titulo">ToDo 0.1</h1>
-      
-        <main class="todo_list"></main>
-        <!--todas las tareas-->
 
+        
+            <main class="todo_list"></main>
+        
+        <!--todas las tareas-->
         <div class="bt-todo" id="bt-todo">
             <span>+</span>
         </div>
 
+        <!--boton-->
+        <div class="modal">
+            <input type="text" class="entrada" >
+            <button class="btn-tarea">Crear tarea 🚪</button>
+            <button class="cerrar">X</button>
+        </div>
+
     </div>
     <script src="./js/index.js" type= "module"></script>
+    <script src="./js/modal.js" type="module"></script>
 </body>
 </html>
