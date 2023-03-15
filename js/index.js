@@ -51,7 +51,7 @@ function blanco(){
  let tch = document.querySelectorAll(".ico");
 
  tch.forEach((tch, nueva_tarea)=>{
-  tch.addEventListener("click")
+  tch.addEventListener("click", tch)
  })
 
  /*function pueba(){
